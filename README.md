@@ -55,7 +55,7 @@ The most advanced version includes:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/calculator-project.git
+   git clone https://github.com/hanbugra82/Calculator-.git
 2. Install dependencies: These dependencies should be added to your `pom.xml` file.
 
 - JavaFX Controls: org.openjfx:javafx-controls:21
