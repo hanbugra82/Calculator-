@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Calculator Application
 #### Video Demo:  <URL HERE>
 This project is a multi-functional calculator application developed as a CS50 final project by Buğra Han. The application is designed
@@ -91,3 +92,7 @@ The most advanced version includes:
 ## Screenshots
 
 ![screenshot](file:///C:/Users/Bugra/Desktop/CalculatorDemo%201/CalculatorDemo/src/main/resources/screenshots/screenshot.png)
+=======
+# Calculator-
+RPN Calculator JavaFX
+>>>>>>> f4ddcb984cdcc0408e31903ad473efa9ad2e9f24
