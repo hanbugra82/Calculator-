@@ -89,5 +89,5 @@ The most advanced version includes:
         - The result will be `14`.
 
 ## Screenshots
-![screenshot](file:///C:/Users/Bugra/Desktop/CalculatorDemo%201/CalculatorDemo/src/main/resources/screenshots/screenshot.png)
+![screenshot](src/main/resources/screenshots/screenshot.png)
 
