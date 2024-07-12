@@ -1,0 +1,173 @@
+.button {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 0, 2); /* Daha belirgin bir gölge efekti */
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 16;
+    -fx-text-fill: #333;
+
+}
+
+#percentageButton:hover,
+#ceButton:hover,
+#cButton:hover,
+#reciprocalButton:hover,
+#squareButton:hover,
+#rootButton:hover,
+#divideButton:hover,
+#multiplyButton:hover,
+#subtractButton:hover,
+#addButton:hover,
+#backspaceButton:hover {
+    -fx-background-color: #CCCCCC;
+}
+
+#twoButton:hover,
+#oneButton:hover,
+#threeButton:hover,
+#fourButton:hover,
+#fiveButton:hover,
+#sixButton:hover,
+#sevenButton:hover,
+#eightButton:hover,
+#nineButton:hover,
+#zeroButton:hover,
+#toggleSignButton:hover,
+#decimalButton:hover,
+#hexButton:hover,
+#octButton:hover,
+#binButton:hover {
+    -fx-background-color: #CCCCCC;
+}
+
+#enterButton:hover {
+    -fx-background-color: #CCCCCC;
+}
+#historyButton:hover {
+    -fx-background-color: #CCCCCC;
+}
+#equalsButton:hover {
+    -fx-background-color: #CCCCCC;
+    -fx-text-fill: #434240;
+}
+
+#rootButton:hover {
+    -fx-background-color: #CCCCCC;
+}
+
+#resultTextField {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 44;
+    -fx-alignment: CENTER_RIGHT;
+    -fx-padding: 0 0 0 10;
+    -fx-background-color: transparent;
+    -fx-text-fill: #333;
+}
+
+#buttonTextDisplayField {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 18;
+    -fx-alignment: CENTER_RIGHT;
+    -fx-padding: 0 0 0 10;
+    -fx-text-fill: rgba(0, 0, 0, 0.5);
+    -fx-background-color: transparent;
+}
+
+#equalsButton {
+    -fx-background-color: #1975c5;
+}
+
+#historyButton {
+    -fx-background-color: #ff990f;
+}
+
+#percentageButton,
+#ceButton,
+#cButton,
+#reciprocalButton,
+#squareButton,
+#rootButton,
+#divideButton,
+#multiplyButton,
+#subtractButton,
+#addButton,
+#backspaceButton {
+    -fx-background-color: #f6f6f6;
+}
+
+#divideButton,
+#multiplyButton,
+#subtractButton,
+#addButton,
+#backspaceButton,
+#equalsButton {
+    -fx-font-size: 25px;
+}
+
+#twoButton,
+#oneButton,
+#threeButton,
+#fourButton,
+#fiveButton,
+#sixButton,
+#sevenButton,
+#eightButton,
+#nineButton,
+#zeroButton,
+#toggleSignButton,
+#decimalButton {
+    -fx-background-color: #fcfcfc;
+    -fx-font-size: 20px;
+}
+
+#historyButton1 {
+    -fx-background-color: #ff990f;
+    -fx-visibility: visible;
+}
+
+#binButton,
+#hexButton,
+#octButton {
+    -fx-background-color: #fdefe5;
+}
+
+.history-content .label {
+    -fx-alignment: center-right;
+    -fx-font-size: 20px;
+}
+.history-item-field {
+    -fx-alignment: top-right;
+    -fx-border-color: #f3f3f3;
+    -fx-border-insets: 0;
+    -fx-border-width: 2;
+    -fx-background-color: transparent;
+    -fx-font-size: 16px
+}
+.history-content {
+    -fx-background-radius: 10 10 0 0;
+    -fx-background-color: #FFF;
+}
+
+#historyScrollPane {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+#historyScrollPane .history-content .label {
+    -fx-background-color: transparent;
+    -fx-font-size: 20px;
+}
+
+#historyScrollPane .viewport {
+    -fx-background-color: transparent;
+}
+
+.history-content {
+    -fx-background-color: #f3f3f3;
+    -fx-background-radius: 10 10 0 0;
+}
+
+.root {
+    -fx-background-color: rgba(240, 240, 240, 0.9);
+}
+

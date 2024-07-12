@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bugra.calculator.CalculatorController">
+
+    <children>
+        <ScrollPane fx:id="historyScrollPane" fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-radius: 10 10 0 0;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <content>
+
+                  <VBox fx:id="historyContent" alignment="TOP_RIGHT" prefHeight="350.0" prefWidth="348.0" styleClass="history-content">
+                      <children>
+                          <Button fx:id="historyButton1" contentDisplay="RIGHT" minHeight="30" minWidth="80" mnemonicParsing="false" onAction="#handleTrashButtonAction" styleClass="button" text="Del">
+                              <font>
+                                  <Font name="Segoe UI" size="16.0" />
+                              </font>
+                          </Button>
+                      </children>
+                  </VBox>
+            </content>
+        </ScrollPane>
+        <Pane fx:id="dimPane" maxHeight="-Infinity" maxWidth="-Infinity" mouseTransparent="false" style="-fx-background-color: rgba(0, 0, 0, 0.4);" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <GridPane fx:id="gridPane" hgap="2.0" layoutX="0" prefHeight="552.0" prefWidth="350.0" vgap="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="0.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="ALWAYS" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="historyButton" minHeight="35.0" minWidth="80" mnemonicParsing="false" onAction="#handleHistoryButtonAction" styleClass="button" text="His" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="binButton" minHeight="35.0" minWidth="75.0" mnemonicParsing="false" onAction="#handleBinButtonClick" styleClass="button" text="Bin" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="16.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="hexButton" minHeight="35.0" minWidth="75.0" mnemonicParsing="false" onAction="#convertToHex" styleClass="button" text="Hex" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="16.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="octButton" minHeight="35.0" minWidth="75.0" mnemonicParsing="false" onAction="#convertToOct" styleClass="button" text="Oct" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="16.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="nineButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handleNumberButtonAction" styleClass="button" text="9" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="25.0" />
+                    </font>
+                </Button>
+                <Button fx:id="multiplyButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handleOperatorButtonAction" styleClass="button" text="×" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="20.0" />
+                    </font>
+                </Button>
+                <Button fx:id="fiveButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handleNumberButtonAction" styleClass="button" text="5" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="25.0" />
+                    </font>
+                </Button>
+                <Button fx:id="sixButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handleNumberButtonAction" styleClass="button" text="6" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="25.0" />
+                    </font>
+                </Button>
+                <Button fx:id="subtractButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handleOperatorButtonAction" styleClass="button" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="twoButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handleNumberButtonAction" styleClass="button" text="2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="25.0" />
+                    </font>
+                </Button>
+                <Button fx:id="threeButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handleNumberButtonAction" styleClass="button" text="3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="25.0" />
+                    </font>
+                </Button>
+                <Button fx:id="addButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handleOperatorButtonAction" styleClass="button" text="+" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="20.0" />
+                    </font>
+                </Button>
+                <Button fx:id="zeroButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handleNumberButtonAction" styleClass="button" text="0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="25.0" />
+                    </font>
+                </Button>
+                <Button fx:id="decimalButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handleDecimalButtonAction" styleClass="button" text="." GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="25.0" />
+                    </font>
+                </Button>
+                <Button fx:id="equalsButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handleEqualsButtonAction" styleClass="button" text="=" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+
+                <font>
+                        <Font name="Segoe UI" size="20.0" />
+                    </font>
+                </Button>
+                <Button fx:id="sevenButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handleNumberButtonAction" styleClass="button" text="7" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="25.0" />
+                    </font>
+                </Button>
+                <Button fx:id="fourButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handleNumberButtonAction" styleClass="button" text="4" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="25.0" />
+                    </font>
+                </Button>
+                <Button fx:id="oneButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handleNumberButtonAction" styleClass="button" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="25.0" />
+                    </font>
+                </Button>
+                <Button fx:id="toggleSignButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handleToggleSign" styleClass="button" text="±" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="25.0" />
+                    </font>
+                </Button>
+                <Button fx:id="ceButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handleCeButtonAction" styleClass="button" text="CE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                <Button fx:id="cButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handleCButtonAction" styleClass="button" text="C" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="20.0" />
+                    </font>
+                </Button>
+                <Button fx:id="backspaceButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handleBackspaceButtonAction" styleClass="button" text="←" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="20.0" />
+                    </font>
+                </Button>
+                <Button fx:id="percentageButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handelCalculatePercentage" styleClass="button" text="\%" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="20.0" />
+                    </font>
+                </Button>
+                <Button fx:id="squareButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handleSquareButtonAction" styleClass="button" text="𝑥²" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="20.0" />
+                    </font>
+                </Button>
+                <Button fx:id="rootButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handleRootButtonAction" styleClass="button" text="√𝑥 " GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="20.0" />
+                    </font>
+                </Button>
+                <Button fx:id="divideButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handleOperatorButtonAction" styleClass="button" text="÷" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="20.0" />
+                    </font>
+                </Button>
+                <Button fx:id="reciprocalButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handleReciprocalButtonAction" styleClass="button" text="⅟𝑥" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="20.0" />
+                    </font>
+                </Button>
+                <Button fx:id="eightButton" minHeight="50.0" minWidth="85.0" mnemonicParsing="false" onAction="#handleNumberButtonAction" styleClass="button" text="8" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI" size="25.0" />
+                    </font>
+                </Button>
+                <TextField fx:id="resultTextField" prefHeight="46.0" prefWidth="315.0" GridPane.columnSpan="4" GridPane.rowIndex="2" />
+                <TextField fx:id="buttonTextDisplayField" prefHeight="50.0" prefWidth="300.0" GridPane.columnSpan="4" GridPane.rowIndex="1" />
+            <ToggleButton fx:id="rpnModeToggle" mnemonicParsing="false" onAction="#handleRpnModeToggle" prefHeight="35.0" prefWidth="75.0" text="RPN" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button fx:id="enterButton" minHeight="35.0" minWidth="80" mnemonicParsing="false" onAction="#handleEnterAction" text="Enter" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Segoe UI" size="16.0" />
+               </font>
+            </Button>
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>
