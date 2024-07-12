@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Calculator Application
 #### Video Demo:  <URL HERE>
 This project is a multi-functional calculator application developed as a CS50 final project by Buğra Han. The application is designed
