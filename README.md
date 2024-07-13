@@ -1,6 +1,9 @@
 # Calculator Application
+
 #### Video Demo:  <URL HERE>
-This project is a multi-functional calculator application developed as a CS50 final project by Buğra Han. The application is designed
+
+This project is a multi-functional calculator application developed as a CS50 final project by Buğra Han. The
+application is designed
 to perform basic arithmetic operations, handle advanced mathematical functions, and display results in different number
 systems. The calculator's functionality is divided into three main categories based on complexity and feature set.
 
@@ -56,18 +59,29 @@ The most advanced version includes:
 1. Clone the repository:
    ```bash
    git clone https://github.com/hanbugra82/Calculator-.git
-2. Install dependencies: These dependencies should be added to your `pom.xml` file.
+2. The following dependencies are used in the project and have been added to the `pom.xml` file. Additionally, any
+   needed dependencies can be obtained from this
+   link: [Maven Central Repository](https://central.sonatype.com/?smo=true).
 
-- JavaFX Controls: org.openjfx:javafx-controls:21
-- exp4j: net.objecthunter:exp4j:0.4.8
-- apfloat: org.apfloat:apfloat:1.10.0
-- Apache Commons Math: org.apache.commons:commons-math3:3.6.1
-- JavaFX FXML: org.openjfx:javafx-fxml:17.0.2
-- ControlsFX: org.controlsfx:controlsfx:11.1.2
-- Ikonli: org.kordamp.ikonli:ikonli-javafx:12.3.1
-- JUnit Jupiter API (for testing): org.junit.jupiter:junit-jupiter-api:${junit.version}
-- JUnit Jupiter Engine (for testing): org.junit.jupiter:junit-jupiter-engine:${junit.version}
-  
+   | Parameter              | Description                             |
+   |------------------------|-----------------------------------------|
+   | `JavaFX Controls:`     | org.openjfx:javafx-controls:21          |
+   | `exp4j:`               | net.objecthunter:exp4j:0.4.8            |
+   | `apfloat:`             | org.apfloat:apfloat:1.10.0              |
+   | `Apache Commons Math:` | org.apache.commons:commons-math3:3.6.1  |
+   | `JavaFX FXML:`         | org.openjfx:javafx-fxml:17.0.2          |
+   | `ControlsFX:`          | org.controlsfx:controlsfx:11.1.2        |
+   | `Ikonli:`              | org.kordamp.ikonli:ikonli-javafx:12.3.1 |
+   | `JUnit Jupiter API`    | (for testing)                           |
+   | `JUnit Jupiter Engine` | (for testing)                           |
+
+3. To utilize the following features, SceneBuilder must be installed. Download SceneBuilder from [Gluon SceneBuilder](https://gluonhq.com/products/scene-builder/) and follow the installation instructions provided on the website.
+   These capabilities enhance the development process by enabling rapid creation of user-friendly interfaces for JavaFX applications.
+- Visual Design: Create and edit UI by dragging and dropping components.
+- FXML Support: Edit FXML files directly to customize UI elements.
+- Visual Controls and Properties: Customize visual properties of components.
+- Integration Ease: Use alongside Java IDEs for seamless component integration and reuse.
+
 ## Usage
 
 1. Enhanced operation handling: the calculator processes values and mathematical operations and calculates the result
@@ -89,5 +103,6 @@ The most advanced version includes:
         - The result will be `14`.
 
 ## Screenshots
+
 ![screenshot](src/main/resources/screenshots/screenshot.png)
 
