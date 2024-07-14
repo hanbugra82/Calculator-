@@ -1,6 +1,6 @@
 # Calculator Application
 
-#### Video Demo:  <URL HERE>
+#### Video Demo:  <https://youtu.be/WEFy49mCK2M>
 
 This project is a multi-functional calculator application developed as a CS50 final project by Buğra Han. The
 application is designed
